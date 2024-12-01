@@ -1,0 +1,106 @@
+/* Navbar.module.css */
+@keyframes navbarGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  background: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.8%; /* Adjust this value as needed */
+}
+
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: font-size 0.3s, text-shadow 0.3s; /* Added transition for font-size and text-shadow */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position underline directly below text */
+  width: 0;
+  height: 4px; /* Set underline thickness */
+  background: white; /* Underline color */
+  transition: width 0.15s ease; /* Animate width */
+}
+
+.navLink:hover {
+  font-size: 1.1rem; /* Increase text size on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+.navLink:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+.dropdownButton {
+  color: white;
+  background-color: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+}
+
+.dropdownButton:hover {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  margin-top: 0.5rem;
+  width: 12rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column; /* Make the menu items stack vertically */
+}
+
+.dropdownItem {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, font-size 0.3s, text-shadow 0.3s; /* Added transition for text-shadow */
+  cursor: pointer; /* Change mouse pointer to hand icon */
+}
+
+.dropdownItem:hover {
+  background-color: rgba(0, 0, 0, 0.169);
+  font-size: 1.1rem; /* Increase text size on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0;
+  margin-top: 0.5rem;
+  width: 12rem;
+  background-color: rgba(25, 24, 24, 0.16);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column; /* Make the menu items stack vertically */
+}
+

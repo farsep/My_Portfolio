@@ -1,11 +1,17 @@
 import './App.css'
+import './styles/globals.css';
+import Navbar from './components/Navbar'
+import StarShowerBackground from './components/StarShowerBackground'
 
 function App() {
 
   return (
-    <>
-      <h1 className='text-4xl font-bold text-center mt-10 bg-red-100 text-red-200'>Hey Hello My name Kidd Keo</h1>
-    </>
+    <div className="App">
+      <div className="wave"></div>
+      <div className="wave"></div>
+      <div className="wave"></div>
+      <Navbar />
+    </div>
   )
 }
 

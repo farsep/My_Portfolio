@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import StarShowerBackground from './StarShowerBackground';
-import styles from './Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
   const [language, setLanguage] = useState('English');

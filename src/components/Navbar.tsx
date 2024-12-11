@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import StarShowerBackground from './StarShowerBackground';
+// import StarShowerBackground from './StarShowerBackground';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {

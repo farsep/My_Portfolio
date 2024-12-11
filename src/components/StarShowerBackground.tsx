@@ -1,4 +1,4 @@
-import { useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
 
 // interface StarShowerBackgroundProps {
 //   children: ReactNode;

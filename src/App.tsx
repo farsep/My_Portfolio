@@ -1,7 +1,7 @@
 import './App.css'
 import './styles/globals.css';
 import Navbar from './components/Navbar'
-import StarShowerBackground from './components/StarShowerBackground'
+// import StarShowerBackground from './components/StarShowerBackground'
 
 function App() {
 

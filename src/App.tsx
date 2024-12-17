@@ -2,6 +2,7 @@ import './App.css'
 import './styles/globals.css';
 import Navbar from './components/Navbar'
 import Presentation from './components/Presentation.tsx'
+import {LanguageProvider} from "./context/LanguageContext.tsx";
 
 // import StarShowerBackground from './components/StarShowerBackground'
 
@@ -12,8 +13,10 @@ function App() {
             <div className="wave"></div>
             <div className="wave"></div>
             <div className="wave"></div>
-            <Navbar/>
-            <Presentation/>
+            <LanguageProvider>
+                <Navbar/>
+                <Presentation/>
+            </LanguageProvider>
         </div>
     )
 }

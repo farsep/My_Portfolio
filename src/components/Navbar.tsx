@@ -14,20 +14,8 @@ const Navbar = () => {
       <div className='mt-2'>
         <nav className={styles.navbar}>
           <div className="flex space-x-4">
-            <a href="#start" className={styles.navLink}>
-              {language === 'English' ? 'Start' : 'Inicio'}
-            </a>
-            <a href="#about-me" className={styles.navLink}>
-              {language === 'English' ? 'About Me' : 'Sobre Mí'}
-            </a>
-            <a href="#my-aspirations" className={styles.navLink}>
-              {language === 'English' ? 'My Aspirations' : 'Mis Aspiraciones'}
-            </a>
-            <a href="#school-education" className={styles.navLink}>
-              {language === 'English' ? 'School and Education' : 'Escuela y Educación'}
-            </a>
-            <a href="#jobs" className={styles.navLink}>
-              {language === 'English' ? 'Jobs' : 'Trabajos'}
+            <a className={styles.navLink}>
+              {language === 'English' ? 'My Message' : 'Mi Mensaje'}
             </a>
           </div>
           <div className="relative">

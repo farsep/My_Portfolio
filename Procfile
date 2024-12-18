@@ -1,1 +1,1 @@
-web: bin/start-nginx-solo
+web: bundle exec nginx -c /app/config/nginx.conf.erb

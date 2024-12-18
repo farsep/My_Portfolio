@@ -1,1 +1,1 @@
-web: bin/start-nginx-solo
+web: serve -s dist

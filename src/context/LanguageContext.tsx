@@ -2,21 +2,20 @@ import { createContext, useState, ReactNode } from 'react';
 
 interface LanguageContextProps {
     language: string;
-    changeLanguage: (lang: string) => void;
+    changeLanguage: (language: string) => void;
 }
 
 export const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguage] = useState({'English' : true,
-        'Spanish' : false});
+    const [language, setLanguage] = useState('English');
 
-    const changeLanguage = (lang: string) => {
-        setLanguage({ 'English': lang === 'English', 'Spanish': lang === 'Spanish' });
+    const changeLanguage = (language: string) => {
+        setLanguage(language);
     };
 
     return (
-        <LanguageContext.Provider value={{ language: language['English'] ? 'English' : 'Spanish', changeLanguage }}>
+        <LanguageContext.Provider value={{ language, changeLanguage }}>
             {children}
         </LanguageContext.Provider>
     );

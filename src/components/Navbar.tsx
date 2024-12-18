@@ -1,9 +1,13 @@
 import { useContext, useState } from 'react';
 import styles from '../styles/Navbar.module.css';
-import { LanguageContext } from "../context/LanguageContext.tsx";
+import { LanguageContext } from '../context/LanguageContext.tsx';
 
 const Navbar = () => {
-  const { language, changeLanguage } = useContext(LanguageContext);
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('LanguageContext must be used within a LanguageProvider');
+  }
+  const { language, changeLanguage } = context;
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {

@@ -4,16 +4,16 @@
   align-items: center;
   color: rgba(44, 44, 44, 0.55);
   font-family: 'Arial', sans-serif;
+  padding: calc(1rem + 1vw);
 }
 
 .presentation__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
   justify-content: space-around;
   margin: auto;
-  width: 80%;
+  width: calc(60% + 20vw);
   background-color: rgba(0, 0, 0, 0.16);
   padding: calc(1em + 1vw);
   border-radius: calc(2.9% + 1vw);
@@ -24,20 +24,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36%;
+  width: calc(20% + 16vw);
 }
 
 .presentation__image {
   width: 100%;
   height: auto;
-  border-radius: 3%;
+  border-radius: calc(1.5% + 1.5vw);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.68s ease, box-shadow 0.5s ease;
 }
 
 .presentation__image:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 17px 50px rgba(0, 0, 0, 0.2), 0 25px 55px rgba(0, 0, 0, 0.1);
-  transform: scale(1.58 ) rotate(8deg);
+  transform: scale(1.58) rotate(8deg);
 }
 
 .presentation__subContainer {
@@ -50,15 +50,16 @@
 .presentation__title {
   font-size: calc(1.5rem + 1vw);
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: calc(0.5rem + 0.5vw);
   color: #444;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .presentation__superDescription {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
   font-size: calc(0.5rem + 1vw);
-  margin-bottom: 1rem;
+  margin-bottom: calc(0.5rem + 0.5vw);
   color: #555;
   line-height: 1.5;
   text-align: center;
@@ -66,7 +67,7 @@
 
 .presentation__description {
   font-size: calc(0.2rem + 1vw);
-  margin-bottom: 1rem;
+  margin-bottom: calc(0.5rem + 0.5vw);
   color: #666;
 }
 
@@ -78,4 +79,47 @@
 .presentation__glowText:hover {
   text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 45px rgba(255, 255, 255, 0.6);
   color: #ffd96b;
+}
+
+@media (max-width: 780px) {
+  .presentation__container {
+    width: calc(80% + 10vw);
+  }
+
+  .presentation__imageContainer {
+    width: calc(65% + 10vw);
+  }
+
+  .presentation__title {
+    font-size: calc(1.36rem + 1vw);
+  }
+
+  .presentation__superDescription,
+  .presentation__description {
+    font-size: calc(0.7rem + 1vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation {
+    flex-direction: column;
+    padding: calc(1rem + 1vw);
+  }
+
+  .presentation__container {
+    width: calc(90% + 5vw);
+  }
+
+  .presentation__imageContainer {
+    width: calc(78% + 8vw);
+  }
+
+  .presentation__title {
+    font-size: calc(1rem + 1vw);
+  }
+
+  .presentation__superDescription,
+  .presentation__description {
+    font-size: calc(0.6rem + 1vw);
+  }
 }

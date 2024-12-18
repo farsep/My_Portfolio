@@ -1,92 +1,102 @@
-/* Navbar.module.css */
-@keyframes navbarGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .navbar {
-  background: none;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  border-radius: 0.8%; /* Adjust this value as needed */
+    background: none;
+    padding: calc(0.5rem + 1vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(80% + 10vw);
+    margin: 0 auto;
+    border-radius: calc(0.4% + 0.4vw);
 }
 
 .navLink {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  transition: font-size 0.3s, text-shadow 0.3s; /* Added transition for font-size and text-shadow */
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: calc(0.25rem + 0.5vw);
+    border-radius: calc(0.125rem + 0.125vw);
+    transition: font-size 0.3s, text-shadow 0.3s;
 }
 
 .navLink::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0; /* Position underline directly below text */
-  width: 0;
-  height: 4px; /* Set underline thickness */
-  background: white; /* Underline color */
-  transition: width 0.15s ease; /* Animate width */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: calc(2px + 0.2vw);
+    background: white;
+    transition: width 0.15s ease;
 }
 
 .navLink:hover {
-  font-size: 1.1rem; /* Increase text size on hover */
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+    font-size: calc(1rem + 0.1vw);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .navLink:hover::after {
-  width: 100%; /* Expand underline on hover */
+    width: 100%;
 }
 
 .dropdownButton {
-  color: white;
-  background-color: none;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+    color: white;
+    background-color: none;
+    padding: calc(0.25rem + 0.5vw);
+    border-radius: calc(0.125rem + 0.125vw);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .dropdownButton:hover {
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Glow effect */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
 .dropdownMenu {
-  position: absolute;
-  right: 0;
-  margin-top: 0.5rem;
-  width: 12rem;
-  background-color: rgba(25, 24, 24, 0.16);
-  border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  display: flex;
-  flex-direction: column; /* Make the menu items stack vertically */
+    position: absolute;
+    right: 0;
+    margin-top: calc(0.25rem + 0.25vw);
+    width: calc(10rem + 2vw);
+    background-color: rgba(25, 24, 24, 0.16);
+    border-radius: calc(0.125rem + 0.125vw);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdownItem {
-  padding: 0.5rem 1rem;
-  color: white;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s, font-size 0.3s, text-shadow 0.3s; /* Added transition for text-shadow */
-  cursor: pointer; /* Change mouse pointer to hand icon */
+    padding: calc(0.25rem + 0.5vw) calc(0.5rem + 1vw);
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, font-size 0.3s, text-shadow 0.3s;
+    cursor: pointer;
 }
 
 .dropdownItem:hover {
-  background-color: rgba(0, 0, 0, 0.169);
-  font-size: 1.1rem; /* Increase text size on hover */
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+    background-color: rgba(0, 0, 0, 0.169);
+    font-size: calc(1rem + 0.1vw);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        width: calc(90% + 5vw);
+    }
+
+    .navLink {
+        padding: calc(0.5rem + 1vw);
+    }
+
+    .dropdownMenu {
+        width: calc(12rem + 3vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: calc(80% + 10vw);
+    }
+    .navLink {
+        padding: calc(0.75rem + 1.5vw);
+    }
 }

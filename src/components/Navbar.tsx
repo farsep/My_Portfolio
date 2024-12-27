@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <div className="relative">
             <button onClick={toggleDropdown} className={styles.dropdownButton}>
-              {language}
+              {language === 'English' ? 'English' : 'Español'}
             </button>
             {isDropdownOpen && (
                 <div className={styles.dropdownMenu}>
